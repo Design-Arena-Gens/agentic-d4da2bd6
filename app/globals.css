@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0B0F19;
+  --card: #12182A;
+  --muted: #9AA4B2;
+  --primary: #6E7CFB;
+  --accent: #22D3EE;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: white;
+  background: radial-gradient(1200px 800px at 10% -10%, rgba(34, 211, 238, .15), rgba(0,0,0,0) 60%),
+              radial-gradient(1000px 700px at 90% 20%, rgba(110, 124, 251, .12), rgba(0,0,0,0) 60%),
+              var(--background);
+}
+
+.container-app {
+  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply bg-[color:var(--card)] rounded-2xl shadow-soft border border-white/5;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-primary {
+  @apply btn bg-primary text-black hover:opacity-90 focus-visible:ring-primary/40;
+}
+.btn-ghost {
+  @apply btn bg-white/5 text-white hover:bg-white/10 focus-visible:ring-white/20;
+}
+
+.input {
+  @apply w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-primary/30;
+}
+
+.label {
+  @apply text-xs uppercase tracking-wider text-white/60;
+}
